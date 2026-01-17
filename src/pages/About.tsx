@@ -7,7 +7,9 @@ import {
   Target, 
   Heart, 
   Zap,
-  CheckCircle
+  CheckCircle,
+  Download,
+  ExternalLink
 } from 'lucide-react';
 
 export const About: React.FC = () => {
@@ -150,7 +152,7 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Certificates Section */}
+      {/* License Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -158,24 +160,34 @@ export const About: React.FC = () => {
             <p className="text-xl text-gray-600">Подтверждение нашей квалификации и профессионализма</p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="aspect-[3/4] overflow-hidden rounded-xl">
-                <img
-                  src="https://i.ibb.co/VWDb4vv4/sertificat-open.jpg"
-                  alt="Лицензия 1"
-                  className="w-full h-full object-contain bg-gray-50 hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl p-6 shadow-xl">
+              <div className="mb-4 flex justify-end space-x-3">
+                <a
+                  href="/license.pdf"
+                  download
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-lg hover:from-blue-700 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-md"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Скачать
+                </a>
+                <a
+                  href="/license.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-white border-2 border-gray-700 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-md"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Открыть в новой вкладке
+                </a>
               </div>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="aspect-[3/4] overflow-hidden rounded-xl">
-                <img
-                  src="https://i.ibb.co/gFHq7R3W/sertificat-open2.jpg"
-                  alt="Лицензия 2"
-                  className="w-full h-full object-contain bg-gray-50 hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
+              
+              <div className="w-full h-screen max-h-screen overflow-hidden rounded-xl border-2 border-gray-200">
+                <iframe
+                  src="/license.pdf"
+                  className="w-full h-full"
+                  title="Лицензия компании Кондор"
+                  style={{ minHeight: '800px' }}
                 />
               </div>
             </div>
