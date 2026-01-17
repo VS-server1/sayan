@@ -8,7 +8,6 @@ import {
   Heart, 
   Zap,
   CheckCircle,
-  Download,
   ExternalLink
 } from 'lucide-react';
 
@@ -161,35 +160,16 @@ export const About: React.FC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 shadow-xl">
-              <div className="mb-4 flex justify-end space-x-3">
-                <a
-                  href="/license.pdf"
-                  download
-                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-lg hover:from-blue-700 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-md"
-                >
-                  <Download className="h-4 w-4 mr-2" />
-                  Скачать
-                </a>
-                <a
-                  href="/license.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-white border-2 border-gray-700 text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-md"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Открыть в новой вкладке
-                </a>
-              </div>
-              
-              <div className="w-full h-screen max-h-screen overflow-hidden rounded-xl border-2 border-gray-200">
-                <iframe
-                  src="/license.pdf"
-                  className="w-full h-full"
-                  title="Лицензия компании Кондор"
-                  style={{ minHeight: '800px' }}
-                />
-              </div>
+            <div className="bg-white rounded-2xl p-8 shadow-xl text-center">
+              <a
+                href="/license.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-lg hover:from-blue-700 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-md font-semibold"
+              >
+                <ExternalLink className="h-5 w-5 mr-2" />
+                Открыть лицензию
+              </a>
             </div>
           </div>
         </div>
